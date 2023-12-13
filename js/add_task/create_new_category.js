@@ -215,7 +215,7 @@ function deleteCategory(i) {
     preventPropagation();
 
     document.getElementById('c-delete-option' + i).innerHTML = `
-    <span class="delete-category-text" onclick="confirmDeletion(${i})">Yes</span><span class="margin-to-sides"> </span><span class="delete-category-text" onclick="doNotDelete(${i})">No</span>
+    <span class="delete-category-text" onclick="confirmDeletion(${i})">yes</span><span class="margin-to-sides"> </span><span class="delete-category-text" onclick="doNotDelete(${i})">no</span>
     `;
 }
 
@@ -242,10 +242,17 @@ function confirmDeletion(i) {
  * 
  * @param {number} i - index of the category that is deleted at the categories array
  */
+// function doNotDelete(i) {
+//     preventPropagation();
+//     document.getElementById('c-delete-option' + i).innerHTML = `
+//     <span class="delete-category-text" onclick=deleteCategory(${i})>delete</span>
+//     `;
+// }
+
 function doNotDelete(i) {
     preventPropagation();
     document.getElementById('c-delete-option' + i).innerHTML = `
-    <span class="delete-category-text" onclick=deleteCategory(${i})>delete</span>
+    <img onclick="deleteCategory(${i})" src="assets/img/close_new_task_button.svg" class="delete-subtask-btn">
     `;
 }
 

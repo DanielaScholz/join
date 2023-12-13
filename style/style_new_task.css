@@ -399,7 +399,8 @@ textarea::-webkit-scrollbar-thumb {
 .option-right-part {
     width: 100px;
     justify-content: center;
-
+    align-items: center;
+    margin-left: auto;
 }
 
 .delete-category-text {

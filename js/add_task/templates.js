@@ -9,6 +9,22 @@
  * @param {object} option - category at position i at the categories array
  * @param {number} i - index of the category at categories array
  */
+// function renderCategoryOptions(option, i) {
+//     document.getElementById('category-options').innerHTML += `
+//     <div id="option-${i}-container" class="space-between selectable">
+//     <div id="${'c-option' + i}" class="option d-none option-left-part" onclick="selectCategory('${option.title}', '${option.color}')">
+//         <div class="option-container">
+//             <span>${option.title}</span>
+//             <div class="color ${option.color}"></div>
+//             <div id="${'c-delete-option' + i}" class="option d-none selectable option-right-part">
+//     <span class="delete-category-text" onclick="deleteCategory(${i})">delete</span>
+// </div>
+// </div >
+//         </div>
+//     </div>
+//     `;
+// }
+
 function renderCategoryOptions(option, i) {
     document.getElementById('category-options').innerHTML += `
     <div id="option-${i}-container" class="space-between selectable">
@@ -17,10 +33,10 @@ function renderCategoryOptions(option, i) {
             <span>${option.title}</span>
             <div class="color ${option.color}"></div>
             <div id="${'c-delete-option' + i}" class="option d-none selectable option-right-part">
-    <span class="delete-category-text" onclick="deleteCategory(${i})">delete</span>
-</div>
-</div >
-        </div>
+                <img onclick="deleteCategory(${i})" src="assets/img/close_new_task_button.svg" class="delete-subtask-btn">
+            </div>
+        </div >
+    </div>
     </div>
     `;
 }

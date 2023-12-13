@@ -1,5 +1,5 @@
 let jsonFromServer = {};
-let BASE_SERVER_URL = 'https://daniela-scholz.developerakademie.net/smallest_backend_ever';
+let BASE_SERVER_URL = 'https://daniela-scholz.at/projects/smallest_backend_ever';
 
 const backend = {
     setItem: function (key, item) {

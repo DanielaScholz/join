@@ -1,6 +1,6 @@
 <?php
 
-$redirect = 'https://daniela-scholz.developerakademie.net/join/index.html';
+$redirect = 'https://daniela-scholz.at/projects/join/index.html';
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
@@ -14,7 +14,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $mailAdress = $_POST['mail'];
         $subject = "Password Reset Link";
         $headers .= "From: Join Team <noreply@developerakademie.com> \r\n";
-        $msg = "Hello,\n\nthis is your password reset link.\nPlease click on the link bellow to set a new Password.\n\ndaniela-scholz.developerakademie.net/join/reset_password.html?($mailAdress)";
+        $msg = "Hello,\n\nthis is your password reset link.\nPlease click on the link bellow to set a new Password.\n\ndaniela-scholz.at/projects/join/reset_password.html?($mailAdress)";
 
         mail($_POST['mail'], $subject, $msg, $link, $headers);
         header("Location: " . $redirect); 
