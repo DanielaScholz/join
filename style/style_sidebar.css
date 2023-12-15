@@ -5,14 +5,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     height: 100vh;
     width: 232px;
     background-color: #2A3647;
 }
 
-.join-icon {
+/* .join-icon {
     margin-top: clamp(66px, 110px, 199px);
-}
+} */
 
 .nav-highlight {
     background-color: #091931;
@@ -46,10 +47,10 @@
     background-color: #091931;
 }
 
-.legal-notice {
+/* .legal-notice {
     margin-top: auto;
     margin-bottom: 126px;
-}
+} */
 
 .main-logo {
     height: 121.97px;
